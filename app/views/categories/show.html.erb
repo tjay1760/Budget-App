@@ -1,0 +1,6 @@
+<%= @category.total_amount%>
+<div id="expenses">
+  <% @expenses.each do |expense| %>
+    <%= render expense %>
+  <% end %>
+</div>

@@ -3,5 +3,10 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-   root "application#index"
+   root "main#index"
+  resources :mains, only: %i[index]
+  resources :users
+  resources :categories, only: %i[index new create update show destroy]  do
+  resources :expenses , only: %i[index new create destroy]
+  end
 end
