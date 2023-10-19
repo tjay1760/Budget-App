@@ -1,1 +1,13 @@
-<h1>Welcome Tjay</h1>
+<%= stylesheet_link_tag "main" %>
+<p style="color: green"><%= notice %></p>
+
+<div class="mains">
+<div class="topic">
+    Budget App
+</div>
+    <div class ="start">
+<%= link_to "LOG IN", new_user_session_path, class: "link_to login" %>
+<%= link_to "SIGN UP", new_user_registration_path, class: "link_to signup" %>
+</div>
+</div>
+

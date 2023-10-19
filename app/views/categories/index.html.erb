@@ -1,4 +1,10 @@
-<div id ="categories">
-<%categories.each do|catgory|%>
-<%= render category%>
+<div id="categories">
+  <%= link_to "New category", new_category_path, class: "link_to newcat" %>
+  <% if @categories.empty? %>
+      <p>No categories available</p>
+        <% else %>
+    <% @categories.each do |category| %>
+          <%= link_to render(category), category_path(category) %>
+    <% end %>
+  <% end %>
 </div>

@@ -1,6 +1,16 @@
-<%= @category.total_amount%>
+
+<p class="tamountE"> Total amount:          <%= @category.total_amount%> </p>
+
 <div id="expenses">
   <% @expenses.each do |expense| %>
     <%= render expense %>
   <% end %>
+</div>
+
+<div >
+  <div class = "links" >
+  <%= link_to "Back to categories", categories_path , class: "link_to"%>
+  <%= link_to "New expense", new_category_expense_path(@category) , class: "link_to" %>
+  </div>
+  <%= button_to "Destroy this category", @category, method: :delete , class: "link_to delete" %>
 </div>
