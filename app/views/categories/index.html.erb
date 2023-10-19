@@ -1,10 +1,12 @@
-<div id="categories">
+<%= stylesheet_link_tag 'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div class ="categories">
   <%= link_to "New category", new_category_path, class: "link_to newcat" %>
   <% if @categories.empty? %>
       <p>No categories available</p>
         <% else %>
     <% @categories.each do |category| %>
-          <%= link_to render(category), category_path(category) %>
+          <%= link_to render(category), category_path(category), class: "link_to cats" %>
     <% end %>
   <% end %>
 </div>
