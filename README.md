@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1>📖 Recipe App</h>
+  <h1>📖 Budget App</h>
 </div>
 
 
@@ -31,7 +31,7 @@
 
 # 📖 Budget_app <a name="about-project"></a>
 
-**Budget_app:** This project employs a Ruby on Rails app with PostgreSQL database, incorporating user-generated budget categories and expenses. Ensured accurate migrations and data relationships as per ERD diagram. 📚
+**Budget_App:** This project employs a Ruby on Rails app with PostgreSQL database, incorporating user-generated budget categories and expenses. Ensured accurate migrations and data relationships as per ERD diagram. 📚
 
 
 Original design idea by Gregoire Vella on Behance.
@@ -72,7 +72,7 @@ In order to run this project you need:
 1. Install Rails
 2. Clone this repo 
 ```
-git clone 
+git clone https://github.com/tjay1760/Budget-App.git 
 ```
 
 To run the project, execute the following command:
@@ -106,7 +106,7 @@ Original design idea by Gregoire Vella on Behance.
 <!-- DEPLOYEMENT LINK -->
 
 ## 🔭 Demo Link <a name="demo-link"></a>
-Click [here] 
+Click [here] (https://budgetapp-g2pb.onrender.com) 
 
  <!-- Video presentation Link-->
 

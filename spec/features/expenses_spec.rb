@@ -10,9 +10,9 @@ RSpec.describe 'categories index' do
     )
 
     @expenses = @category.expenses.create([
-      { name: 'burger', amount: 12, user: @user },
-      { name: 'chips', amount: 5, user: @user }
-    ])
+                                            { name: 'burger', amount: 12, user: @user },
+                                            { name: 'chips', amount: 5, user: @user }
+                                          ])
 
     @user.save
     login_as(@user, scope: :user)
@@ -24,14 +24,12 @@ RSpec.describe 'categories index' do
     expect(page).to have_content(@expenses.second.name)
   end
 
-   
   it 'displays the price of each expense on the category page' do
     visit category_expenses_path(@category)
     @expenses.each do |expense|
       expect(page).to have_content(expense.amount.to_i)
     end
   end
-  
 
   it 'see the Amount text' do
     visit category_expenses_path(@category.id)
