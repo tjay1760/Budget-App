@@ -19,7 +19,7 @@
   - [Setup](#setup)
 - [👥 Authors](#authors)
 - [⭐️Demo Links](#demo-links)
-- [🔭Vedio Presentation Links](#video-links)
+- [🔭Video Presentation Links](#video-links)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
