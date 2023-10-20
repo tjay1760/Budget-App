@@ -1,25 +1,28 @@
-.actions{
-    display: flex;
-justify-content:flex-end;
-gap:50%;
-margin-right: 1%;
-background:  #3778c2;
-padding: 2%;
-margin:0;
-color: #fff;
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50%;
+  margin-right: 1%;
+  background: #3778c2;
+  padding: 2%;
+  color: #fff;
 }
-.form{
-    width: 100%;
-}   
-.field{
-    width: 100%;
-    padding:0%;
+
+.form {
+  width: 100%;
 }
-.btn-login{
-    background-color: transparent;
-    border:none;
-    color: #fff;
+
+.field {
+  width: 100%;
+  padding: 0%;
 }
-body{
-    background-color: #F5F6F8;
+
+.btn-login {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+body {
+  background-color: #f5f6f8;
 }

@@ -1,84 +1,86 @@
 
-.categories{
-    background:#F0F2F1;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    
+.categories {
+  background: #f0f2f1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
 }
-.link_to{
-    text-decoration: none;
-    color: #434b54;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
-    font-size: 20px;
+
+.link_to {
+  text-decoration: none;
+  color: #434b54;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
 }
+
 .category {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #434b54;
-    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
-    min-height: 4rem;
-    padding: 0 0.5rem;
-    background-color: white;
-    margin-left: 1%;
-    margin-right: 2%;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #434b54;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+  min-height: 4rem;
+  padding: 0 0.5rem;
+  background-color: white;
+  margin-left: 1%;
+  margin-right: 2%;
+}
 
 .icon {
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  .icon-name {
-    display: flex;
-    line-height: normal;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .tamount {
-    font-weight: 600;
-  }
-  
-  .newcat {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-name {
+  display: flex;
+  line-height: normal;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tamount {
+  font-weight: 600;
+}
+
+.newcat {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .expense {
-    box-shadow: rgba(59, 170, 255, 0.101) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
-  }
-  
-  .tamountE {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .delete {
-    background-color: rgb(218, 17, 17);
-    color: #fff;
-    border: none;
-  }
-  
-  .links {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  .button_to {
-    margin: 1rem;
-  }
-  
-  /* new expenses */
-  .back {
-    margin-left: 0.7rem;
-  }
-  .save-btn{
-    background-color: #5fb523;
-    margin: 10%;
-    color: #fff;
-    border: none;
-  }
+  box-shadow: rgba(59, 170, 255, 0.101) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+}
+
+.tamountE {
+  display: flex;
+  justify-content: center;
+}
+
+.delete {
+  background-color: rgb(218, 17, 17);
+  color: #fff;
+  border: none;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.button_to {
+  margin: 1rem;
+}
+
+/* new expenses */
+.back {
+  margin-left: 0.7rem;
+}
+
+.save-btn {
+  background-color: #5fb523;
+  margin: 10%;
+  color: #fff;
+  border: none;
+}
