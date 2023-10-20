@@ -33,11 +33,6 @@
 
 **Budget_app:** This project employs a Ruby on Rails app with PostgreSQL database, incorporating user-generated budget categories and expenses. Ensured accurate migrations and data relationships as per ERD diagram. 📚
 
-# Screenshots
-
-|            Splash Screen             |              SignUp/In               | Category Page                         | Espenses Page                         |
-| :----------------------------------: | :----------------------------------: | ------------------------------------- | ------------------------------------ |
-| ![](./app/assets/images/splash.png) | ![](./app/assets/images/splash2.png) | ![](./app/assets/images/categories.png) | ![](./app/assets/images/expenses.png) |
 
 Original design idea by Gregoire Vella on Behance.
 ## 🛠 Built With <a name="built-with"></a>
@@ -77,7 +72,7 @@ In order to run this project you need:
 1. Install Rails
 2. Clone this repo 
 ```
-git clone git@github.com:yashodhicy/Budget_app.git
+git clone 
 ```
 
 To run the project, execute the following command:
