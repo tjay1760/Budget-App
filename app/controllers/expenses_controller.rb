@@ -41,31 +41,27 @@ class ExpensesController < ApplicationController
     # Redirect to the first category's show page after all expenses have been processed
   end
 
- 
-
   # DELETE /expenses/1 or /expenses/1.json
   def destroy
-    begin
-      @expense = Expense.find(params[:id])
-      if @expense.destroy
-        respond_to do |format|
-          format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
-          format.json { head :no_content }
-        end
-      else
-        respond_to do |format|
-          format.html { redirect_to expenses_url, alert: 'Failed to destroy the expense.' }
-          format.json { render json: { error: 'Failed to destroy the expense' }, status: :unprocessable_entity }
-        end
-      end
-    rescue StandardError => e
+    @expense = Expense.find(params[:id])
+    if @expense.destroy
       respond_to do |format|
-        format.html { redirect_to expenses_url, alert: "An error occurred: #{e.message}" }
-        format.json { render json: { error: e.message }, status: :unprocessable_entity }
+        format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to expenses_url, alert: 'Failed to destroy the expense.' }
+        format.json { render json: { error: 'Failed to destroy the expense' }, status: :unprocessable_entity }
       end
     end
+  rescue StandardError => e
+    respond_to do |format|
+      format.html { redirect_to expenses_url, alert: "An error occurred: #{e.message}" }
+      format.json { render json: { error: e.message }, status: :unprocessable_entity }
+    end
   end
-   
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

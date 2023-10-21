@@ -1,15 +1,16 @@
 <%= stylesheet_link_tag 'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<div class ="categories">
-
+<div class="categories">
   <% if @categories.empty? %>
-      <p>No categories available</p>
-        <% else %>
+    <p>No categories available</p>
+  <% else %>
     <% @categories.each do |category| %>
-          <%= link_to render(category), category_path(category), class: "link_to cats" %>
+      <%= link_to render(category), category_path(category), class: "link_to cats" %>
     <% end %>
   <% end %>
-  <div class="btn-holde">
-    <%= link_to "New category", new_category_path, class: "link_to save-btn save-btn-cat" %>
-    </div>
+  
+<div class="btn-holder" style="position: absolute; bottom: 0; display: flex; justify-content: center; align-items: center; background-color: #5fb523; height: 15%; width: 100%">
+  <%= link_to "New category", new_category_path, class: "link_to save-btn", style: "border: 1px solid white;" %>
+</div>
+
 </div>

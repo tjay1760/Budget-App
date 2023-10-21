@@ -12,7 +12,8 @@
   <%= link_to "Back to categories", categories_path , class: "link_to"%>
   <%= link_to "New expense", new_category_expense_path(@category) , class: "link_to" %>
   </div>
-  <div class ="btn-holder">
-  <%= button_to "DESTROY", @category, method: :delete , class: "link_to save-btn" %>
-  </div>
+
+<div class="btn-holder" style="position: absolute; bottom: 0; display: flex; justify-content: center; align-items: center; background-color: #5fb523; height: 15%; width: 100%">
+  <%= button_to "DESTROY", @category, method: :delete, class: "link_to save-btn", style: "border: 1px solid white; padding:10px;" %>
+</div>
 </div>
