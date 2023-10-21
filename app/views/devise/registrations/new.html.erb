@@ -3,12 +3,11 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   
   <div class="actions">
-    <%= f.label "SIGN UP" %>
-    <%= f.submit "Sign up", class: "btn-login" %>
+    <%= f.label "Register" %>
+    <%= f.submit "Next", class: "btn-login" %>
   </div>
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name" %>
   </div>
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>

@@ -21,10 +21,10 @@ class CategoriesController < ApplicationController
   def create
     @user = current_user
     @category = @user.categories.new(category_params)
-
+  
     respond_to do |format|
       if @category.save
-        format.html { redirect_to categories_url, notice: 'Category was successfully created.' }
+        format.html { redirect_to category_path(@category), notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -32,6 +32,7 @@ class CategoriesController < ApplicationController
       end
     end
   end
+  
 
   def destroy
     @category = Category.find(params[:id])

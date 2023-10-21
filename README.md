@@ -143,7 +143,7 @@ Please support this project and be a part of something meaningful and impactful.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Grateful to all for inspiring codebase, your dedication and creativity made a lasting impact on our success. Thank you!
+Grateful to all for inspiring codebase, your dedication and creativity made a lasting impact on our success. Special thans to Gregoire Vella who inspired the design of this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

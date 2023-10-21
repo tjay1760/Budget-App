@@ -50,6 +50,7 @@
 
 .expense {
   box-shadow: rgba(59, 170, 255, 0.101) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+  background-color: #fff;
 }
 
 .tamountE {
@@ -80,7 +81,17 @@
 
 .save-btn {
   background-color: #5fb523;
-  margin: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   color: #fff;
-  border: none;
+  border: 1px solid white;
+  padding: 2%;
+}
+.btn-holder{
+  margin-top: 5%;
+  background-color: #5fb523;
+}
+.save-btn-cat{
+width: 80%;
+margin: 5% 5% 4% 8%;
 }

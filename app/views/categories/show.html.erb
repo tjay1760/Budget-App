@@ -12,5 +12,7 @@
   <%= link_to "Back to categories", categories_path , class: "link_to"%>
   <%= link_to "New expense", new_category_expense_path(@category) , class: "link_to" %>
   </div>
-  <%= button_to "DESTROY", @category, method: :delete , class: "link_to delete" %>
+  <div class ="btn-holder">
+  <%= button_to "DESTROY", @category, method: :delete , class: "link_to save-btn" %>
+  </div>
 </div>

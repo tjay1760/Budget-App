@@ -1,4 +1,4 @@
-<%= form_with(model: [@category, @expense]) do |form| %>
+<%= form_with(model: [@category, @expense], html: { id: 'myForm' }) do |form| %>
   <% if expense.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
@@ -11,27 +11,46 @@
     </div>
   <% end %>
 
-  <div  class = "field">
+  <div class="field">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name , required: true %>
+    <%= form.text_field :name, required: true %>
   </div>
 
-  <div  class = "field">
+  <div class="field">
     <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount , required: true%>
+    <%= form.text_field :amount, required: true %>
   </div>
 
   <div class="checkbox-exp">
-  <%= form.label :categories %>
-  <%= form.collection_check_boxes(:category_ids, @author.categories.all, :id, :name) do |b| %>
-    <div class="checkbox">
-      <%= b.check_box %>
-      <%= b.label %>
-    </div>
-  <% end %>
-</div>
+    <%= form.label :categories %>
+    <%= form.collection_check_boxes(:category_ids, @author.categories.all, :id, :name) do |b| %>
+      <div class="checkbox">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
 
-  <div  class = "field">
+  <div class="field">
     <%= form.submit 'SAVE', class: "link_to save-btn" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    var atLeastOneChecked = false;
+
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        atLeastOneChecked = true;
+        break;
+      }
+    }
+
+    if (!atLeastOneChecked) {
+      alert("Please select at least one category.");
+      event.preventDefault(); // Prevent the form from being submitted.
+    }
+  });
+</script>
