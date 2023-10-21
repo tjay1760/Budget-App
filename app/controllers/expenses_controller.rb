@@ -41,34 +41,31 @@ class ExpensesController < ApplicationController
     # Redirect to the first category's show page after all expenses have been processed
   end
 
-  # PATCH/PUT /expenses/1 or /expenses/1.json
-  def update
-    respond_to do |format|
-      if @expense.update(expense_params)
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully updated.' }
-        format.json { render :show, status: :ok, location: @expense }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @expense.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+ 
 
   # DELETE /expenses/1 or /expenses/1.json
   def destroy
-    @expense = Expense.find(params[:id])
-
-    respond_to do |format|
+    begin
+      @expense = Expense.find(params[:id])
       if @expense.destroy
-        format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
-        format.json { head :no_content }
+        respond_to do |format|
+          format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
+          format.json { head :no_content }
+        end
       else
-        format.html { redirect_to expenses_url, alert: 'Failed to destroy the expense.' }
-        format.json { render json: { error: 'Failed to destroy the expense' }, status: :unprocessable_entity }
+        respond_to do |format|
+          format.html { redirect_to expenses_url, alert: 'Failed to destroy the expense.' }
+          format.json { render json: { error: 'Failed to destroy the expense' }, status: :unprocessable_entity }
+        end
+      end
+    rescue StandardError => e
+      respond_to do |format|
+        format.html { redirect_to expenses_url, alert: "An error occurred: #{e.message}" }
+        format.json { render json: { error: e.message }, status: :unprocessable_entity }
       end
     end
   end
-
+   
   private
 
   # Use callbacks to share common setup or constraints between actions.

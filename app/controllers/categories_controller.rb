@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   load_and_authorize_resource
-  before_action :set_category, only: %i[show edit update destroy]
+  before_action :set_category, only: %i[show edit destroy]
 
   def index
     @user = current_user
@@ -34,20 +34,27 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
-    if @category.destroy
-      respond_to do |format|
-        format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
-        format.json { head :no_content }
+    begin
+      @category = Category.find(params[:id])
+      if @category.destroy
+        respond_to do |format|
+          format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
+          format.json { head :no_content }
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to categories_url, alert: 'Failed to destroy the category.' }
+          format.json { render json: { error: 'Failed to destroy the category' }, status: :unprocessable_entity }
+        end
       end
-    else
+    rescue StandardError => e
       respond_to do |format|
-        format.html { redirect_to categories_url, alert: 'Failed to destroy the category.' }
-        format.json { render json: { error: 'Failed to destroy the category' }, status: :unprocessable_entity }
+        format.html { redirect_to categories_url, alert: "An error occurred: #{e.message}" }
+        format.json { render json: { error: e.message }, status: :unprocessable_entity }
       end
     end
   end
-
+  
   private
 
   # Use callbacks to share common setup or constraints between actions.
