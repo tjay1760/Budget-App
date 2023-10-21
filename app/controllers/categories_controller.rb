@@ -36,13 +36,19 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
-    @category.destroy
-
-    respond_to do |format|
-      format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
-      format.json { head :no_content }
+    if @category.destroy
+      respond_to do |format|
+        format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to categories_url, alert: 'Failed to destroy the category.' }
+        format.json { render json: { error: 'Failed to destroy the category' }, status: :unprocessable_entity }
+      end
     end
   end
+  
 
   private
 

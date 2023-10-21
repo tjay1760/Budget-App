@@ -56,13 +56,19 @@ class ExpensesController < ApplicationController
 
   # DELETE /expenses/1 or /expenses/1.json
   def destroy
-    @expense.destroy
-
+    @expense = Expense.find(params[:id])
+  
     respond_to do |format|
-      format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
-      format.json { head :no_content }
+      if @expense.destroy
+        format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to expenses_url, alert: 'Failed to destroy the expense.' }
+        format.json { render json: { error: 'Failed to destroy the expense' }, status: :unprocessable_entity }
+      end
     end
   end
+  
 
   private
 

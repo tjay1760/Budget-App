@@ -6,7 +6,7 @@ Rails.application.routes.draw do
    root "splash#index"
   resources :main, only: %i[index]
   resources :users
-  resources :categories, only: %i[index new create update show destroy]  do
+  resources :categories, only: %i[index new create show destroy]  do
   resources :expenses , only: %i[index new create destroy]
   end
 end
