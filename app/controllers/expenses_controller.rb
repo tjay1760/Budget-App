@@ -57,7 +57,7 @@ class ExpensesController < ApplicationController
   # DELETE /expenses/1 or /expenses/1.json
   def destroy
     @expense = Expense.find(params[:id])
-  
+
     respond_to do |format|
       if @expense.destroy
         format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
@@ -68,7 +68,6 @@ class ExpensesController < ApplicationController
       end
     end
   end
-  
 
   private
 

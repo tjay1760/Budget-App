@@ -87,11 +87,13 @@
   border: 1px solid white;
   padding: 2%;
 }
-.btn-holder{
+
+.btn-holder {
   margin-top: 5%;
   background-color: #5fb523;
 }
-.save-btn-cat{
-width: 80%;
-margin: 5% 5% 4% 8%;
+
+.save-btn-cat {
+  width: 80%;
+  margin: 5% 5% 4% 8%;
 }
