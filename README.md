@@ -34,7 +34,7 @@
 **Budget_App:** This project employs a Ruby on Rails app with PostgreSQL database, incorporating user-generated budget categories and expenses. Ensured accurate migrations and data relationships as per ERD diagram. 📚
 
 
-Original design idea by Gregoire Vella on Behance.
+
 ## 🛠 Built With <a name="built-with"></a>
 
   <ul>
@@ -100,7 +100,6 @@ bundle exec rspec spec
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/john-murianki-thiongo)
 
 
-Original design idea by Gregoire Vella on Behance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- DEPLOYEMENT LINK -->
@@ -143,7 +142,7 @@ Please support this project and be a part of something meaningful and impactful.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Grateful to all for inspiring codebase, your dedication and creativity made a lasting impact on our success. Special thans to Gregoire Vella who inspired the design of this project.
+Grateful to all for inspiring codebase, your dedication and creativity made a lasting impact on our success. Special thanks to Gregoire Vella who inspired the design of this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
