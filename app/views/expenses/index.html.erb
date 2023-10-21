@@ -1,0 +1,7 @@
+<%= stylesheet_link_tag "categories" %>
+<div class ="expenses">
+    <%= @expenses.each do |expense|%>
+    <% render expense%>
+    <%end%>
+
+</div>
